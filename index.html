@@ -5,30 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/x-icon" href="./Resources/favicon-16x16.png">
     <title>F1 TV</title>
 </head>
 <body>
+    <header>
+        <div class="img-container">
+            <img src="./Resources/icon192x192.png" alt="logo" id="header-logo">
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <ul class="nav-ul">
+            <li class="nav-li">
+                <a class="nav-a" id="nav-sign-in">Sign In</a>
+            </li>
+            <li class="nav-li">
+                <a class="nav-a" id="nav-register">Register</a>
+            </li>
+        </ul>
+    </nav>
     <div class="container">
-        <h1>SIGN IN</h1>
-        <form id="login-form" class="form">
-            <div class="card-row">
-                <label for="input-email">Email address</label>
-                <input type="email" placeholder="enter your email" class="inputs" id="input-email">
-            </div>
-            <div class="card-row">
-                <label for="input-password">Password</label>
-                <input class="inputs" type="password" placeholder="enter your password" id="input-password">
-            </div>
-            <div class="card-row">
-                <label for="remember">Remember me</label>
-                <input type="radio" class="radio" id="remember">
-                <a class="links" id="forgot" target="_blank" href="#">Forgot your password?</a>
-            </div>
-            <div class="card-row">
-                <button type="submit" class="buttons" id="login">SIGN IN</button>
-            </div>
-        </form>
-        
+        <div class="card-container">
+            <h1 class="title">SIGN IN</h1>
+            <form id="login-form" class="form">
+                <div class="card-row">
+                    <label for="input-email">Email address</label>
+                    <input type="email" placeholder="enter your email" class="inputs" id="input-email" required>
+                </div>
+                <div class="card-row">
+                    <label for="input-password">Password</label>
+                    <input class="inputs" type="password" placeholder="enter your password" id="input-password" required>
+                </div>
+                <div class="card-row">
+                    <label for="remember" id="remember-label">Remember me</label>
+                    <input type="radio" class="radio" id="remember">
+                    <div class="link-container" id="card-footer">
+                        <a class="links" id="forgot" target="_blank" href="#"><p>Forgotten password?</p></a>
+                    </div>
+                    
+                </div>
+                <div class="card-row">
+                    <button type="submit" class="buttons" id="login">SIGN IN</button>
+                </div>
+                <div class="card-row" id="card-footer-2">
+                    <p class="p" id="account-register-p">Don't have an account yet?</p>
+                    <a class="links">Register with F1</a>
+                </div>
+            </form>
+            
+        </div>
+        <div class="register-card-container">
+            
+        </div>
     </div>
     <script src="./app.js"></script>
 </body>
